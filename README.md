@@ -1,6 +1,6 @@
-# Android_Advanced_Atelierul_Digital
+# AtelierDigital_ShopWithus
 App name: [ShopWithus]
-Location: [https://github.com/ManolacheCatalin/Android_Advanced_Atelierul_Digital]
+Location: [https://github.com/ManolacheCatalin/AtelierDigital_ShopWithus]
 Backend: [TBD]
 Reviewers: [TBD]
 Reviewed: [TBD]
