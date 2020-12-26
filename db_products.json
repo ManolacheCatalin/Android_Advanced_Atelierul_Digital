@@ -1,0 +1,110 @@
+  {"products":
+    [
+      {
+      "productName": "Laptop Gaming Lenovo Legion 5 15IMH05H",
+      "productShortDescription":"ceva",
+      "productDescription": "Experimentați gaming-ul ca niciodată pe laptopul Legion 5 alimentat de procesoarele Intel® Core seria H din generatia a 10-a. Jucați și transmiteți cele mai noi titluri AAA la performanțe maxime pe Legion 5 cu frecvente de până la 4.5 GHz, 4 nuclee, 8 MB cache si Intel® Wi-Fi 6",
+      "productCategory":"Laptopuri",
+      "productPrice":"5400.00",
+      "starRating":4,
+      "imageUrl":"",
+      "vendor":"Lenovo Romania",
+      "favourite":false
+    },{
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"Laptopuri",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    },{
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"----",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    },{
+      "productId": 4,
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"----",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    },{
+      "productId": 5,
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"----",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    },{
+      "productId": 6,
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"----",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    },{
+      "productId": 7,
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"----",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    },{
+      "productId": 8,
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"----",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    },{
+      "productId": 9,
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"----",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    },{
+      "productId": 10,
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"----",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    },{
+      "productId": 11,
+      "productName": "json-server",
+      "productDescription": "typicode",
+      "productCategory":"----",
+      "productPrice":"12.55",
+      "starRating":3.5,
+      "vendor":"-----",
+      "favourite":false
+    }
+],
+  "Category":[
+    {
+      "categoryId":1,
+      "categoryName":"dfsf",
+      "favourite":false
+    }
+  ]
+}
