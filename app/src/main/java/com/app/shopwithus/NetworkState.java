@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
+import android.util.Log;
 
 public class NetworkState {
 
@@ -22,13 +23,18 @@ public class NetworkState {
     }
 
     public static boolean hasNetworkAccess(Context context) {
+        boolean flag=false;
         manager = context.getSystemService(ConnectivityManager.class);
         Network net = manager.getActiveNetwork();
         NetworkCapabilities networkCapabilities = manager.getNetworkCapabilities(net);
-        if (networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
-                && networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
-                networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR))
-            return true;
-        else return false;
+        try {
+            if (networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
+                    && networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
+                    networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR))
+                flag=true;
+        }catch (NullPointerException e){
+            Log.e("DEBUG","Something went wrong!");
+        }
+        return flag;
     }
 }

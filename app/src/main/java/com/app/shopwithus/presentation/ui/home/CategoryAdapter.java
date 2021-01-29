@@ -1,7 +1,6 @@
 package com.app.shopwithus.presentation.ui.home;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -10,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.shopwithus.R;
 import com.app.shopwithus.data.model.Category;
+import com.app.shopwithus.data.model.Product;
 import com.app.shopwithus.databinding.MainCategoryItemBinding;
+import com.app.shopwithus.databinding.MainListItemBinding;
+import com.app.shopwithus.databinding.MainListItemBindingImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,8 +56,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             super(binding.getRoot());
             this.binding=binding;
         }
-        public void bind(Category model){
-          binding.setModel(model);
+        public void bind(Category category){
+            binding.setCategory(category);
         }
     }
 }

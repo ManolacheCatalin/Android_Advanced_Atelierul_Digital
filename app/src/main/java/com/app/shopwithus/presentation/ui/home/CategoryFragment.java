@@ -9,14 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.shopwithus.R;
 import com.app.shopwithus.data.model.Category;
-import com.app.shopwithus.databinding.FragmentHomeBinding;
+import com.app.shopwithus.databinding.FragmentCategoryBinding;
 
-import java.lang.invoke.LambdaConversionException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,15 +23,15 @@ public class CategoryFragment extends Fragment {
     private CategoryViewModel categoryViewModel;
 //    private RecyclerView recyclerView;
     private CategoryAdapter adapter;
-    private List<Category> list=new ArrayList<>();
+    private List<Category> list;
     public CategoryFragment(){
-
+     this.list=new ArrayList<>();
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        categoryViewModel= new ViewModelProvider(getActivity(),new CategoryViewModelFactory()).get(CategoryViewModel.class);
-        FragmentHomeBinding binding= DataBindingUtil.inflate(inflater,R.layout.fragment_home,container,false);
+        categoryViewModel= new ViewModelProvider(getActivity(),new CategoryViewModelFactory(getActivity().getBaseContext())).get(CategoryViewModel.class);
+        FragmentCategoryBinding binding= DataBindingUtil.inflate(inflater,R.layout.fragment_category,container,false);
         binding.setCategoryViewModel(categoryViewModel);
         adapter=new CategoryAdapter();
         adapter.updateUi(list);

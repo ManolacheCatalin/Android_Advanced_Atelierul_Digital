@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="product"
+            type="com.app.shopwithus.data.model.Product" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +20,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/draw_circle"
         android:gravity="center"
-        android:text="A"
+        android:text="@{String.valueOf(product.firstChar)}"
         android:textColor="@android:color/darker_gray"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +33,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/avatar_icon"
-        android:text="Lenovo hs15D"
+        android:text="@{product.productName}"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/avatar_icon"
@@ -41,7 +47,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/avatar_icon"
-        android:text="Laptopuri"
+        android:text="@{product.productCategory}"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/avatar_icon"
@@ -56,30 +62,17 @@
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/avatar_icon"
         android:maxLines="1"
-        android:text="1299.00 RON"
+        android:text="@{String.valueOf(product.productPrice)}"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/avatar_icon"
         app:layout_constraintTop_toBottomOf="@+id/type_item" />
-
-    <TextView
-        android:id="@+id/time_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/title_item"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-        android:text="16:50pm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/favourite_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/time_item"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
         android:padding="4dp"
         android:src="@drawable/ic_favorite_item"
@@ -88,3 +81,4 @@
     </ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

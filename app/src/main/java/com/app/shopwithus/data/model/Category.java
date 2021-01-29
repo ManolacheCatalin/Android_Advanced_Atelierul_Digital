@@ -1,34 +1,34 @@
 package com.app.shopwithus.data.model;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
+
+import java.io.File;
 
 public class Category {
 
-    private Integer categoryId;
     private String categoryName;
-    private boolean favourite;
-    private String urlImage;
+    private Drawable drawable;
 
-    public Category(Integer categoryId, String categoryName, boolean favourite, String urlImage) {
-        this.categoryId = categoryId;
+    public Category(String categoryName,Drawable drawable) {
         this.categoryName = categoryName;
-        this.favourite = favourite;
-        this.urlImage = urlImage;
+        this.drawable=drawable;
     }
 
-    public String getUrlImage() {
-        return urlImage;
+    public Drawable getDrawable() {
+        return drawable;
     }
 
-    public Integer getCategoryId() {
-        return categoryId;
+    public void setDrawable(Drawable drawable) {
+        this.drawable = drawable;
     }
 
     public String getCategoryName() {
         return categoryName;
     }
 
-    public boolean isFavourite() {
-        return favourite;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }

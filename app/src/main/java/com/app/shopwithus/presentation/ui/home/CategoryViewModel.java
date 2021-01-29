@@ -7,19 +7,20 @@ import com.app.shopwithus.data.model.Category;
 import com.app.shopwithus.data.model.Product;
 import com.app.shopwithus.domain.CategoryUseCase;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryViewModel extends ViewModel {
 
-    private MutableLiveData<List<Category>> items=new MutableLiveData<>();
+    private List<Category> list=new ArrayList<>();
     private final CategoryUseCase categoryUseCase;
     public CategoryViewModel(CategoryUseCase categoryUseCase) {
         this.categoryUseCase = categoryUseCase;
     }
 
-    public MutableLiveData<List<Category>> getItems() {
-        items=categoryUseCase.getList();
-        return items;
+    public List<Category> getItems() {
+        list.addAll(categoryUseCase.getItems());
+        return list;
     }
 
 }

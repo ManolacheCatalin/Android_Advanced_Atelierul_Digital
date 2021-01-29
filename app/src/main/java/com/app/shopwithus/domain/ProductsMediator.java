@@ -1,6 +1,5 @@
 package com.app.shopwithus.domain;
 
-import com.app.shopwithus.data.remote.ServerFetchCategory;
 import com.app.shopwithus.data.remote.ServerFetchProducts;
 
 import java.util.concurrent.ExecutorService;
@@ -14,8 +13,4 @@ public class ProductsMediator {
     this.executorService= Executors.newSingleThreadExecutor();
     this.serverFetchProducts=serverFetchProducts;
     }
-
-
-
-
 }

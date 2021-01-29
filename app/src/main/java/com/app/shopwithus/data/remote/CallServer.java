@@ -3,6 +3,7 @@ package com.app.shopwithus.data.remote;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.OkHttpClient;
@@ -15,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public abstract class CallServer<T>{
 
     protected String BaseUrl="http://192.168.100.90:3000/";
-    protected List<T> list;
+    protected List<T> list=new ArrayList<>();
     protected ServerInterface<T> serviceApi;
 
     protected void setApi(ServerInterface<T> serviceApi){

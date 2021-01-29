@@ -99,12 +99,5 @@
       "vendor":"-----",
       "favourite":false
     }
-],
-  "Category":[
-    {
-      "categoryId":1,
-      "categoryName":"dfsf",
-      "favourite":false
-    }
-  ]
+]
 }

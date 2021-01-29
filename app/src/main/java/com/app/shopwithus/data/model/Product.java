@@ -102,6 +102,9 @@ public class Product {
     public void setProductShortDescription(String productShortDescription) {
         this.productShortDescription = productShortDescription;
     }
+    public Character getFirstChar(){
+        return productName.charAt(0);
+    }
 
     public void setFavourite(boolean favourite) {
         this.favourite = favourite;
