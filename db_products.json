@@ -7,7 +7,7 @@
       "productCategory":"Laptopuri",
       "productPrice":"5400.00",
       "starRating":4,
-      "imageUrl":"",
+      "imageUrl":"---------",
       "vendor":"Lenovo Romania",
       "favourite":false
     },{
@@ -16,6 +16,7 @@
       "productCategory":"Laptopuri",
       "productPrice":"12.55",
       "starRating":3.5,
+      "imageUrl":"---------",
       "vendor":"-----",
       "favourite":false
     },{
@@ -24,78 +25,7 @@
       "productCategory":"----",
       "productPrice":"12.55",
       "starRating":3.5,
-      "vendor":"-----",
-      "favourite":false
-    },{
-      "productId": 4,
-      "productName": "json-server",
-      "productDescription": "typicode",
-      "productCategory":"----",
-      "productPrice":"12.55",
-      "starRating":3.5,
-      "vendor":"-----",
-      "favourite":false
-    },{
-      "productId": 5,
-      "productName": "json-server",
-      "productDescription": "typicode",
-      "productCategory":"----",
-      "productPrice":"12.55",
-      "starRating":3.5,
-      "vendor":"-----",
-      "favourite":false
-    },{
-      "productId": 6,
-      "productName": "json-server",
-      "productDescription": "typicode",
-      "productCategory":"----",
-      "productPrice":"12.55",
-      "starRating":3.5,
-      "vendor":"-----",
-      "favourite":false
-    },{
-      "productId": 7,
-      "productName": "json-server",
-      "productDescription": "typicode",
-      "productCategory":"----",
-      "productPrice":"12.55",
-      "starRating":3.5,
-      "vendor":"-----",
-      "favourite":false
-    },{
-      "productId": 8,
-      "productName": "json-server",
-      "productDescription": "typicode",
-      "productCategory":"----",
-      "productPrice":"12.55",
-      "starRating":3.5,
-      "vendor":"-----",
-      "favourite":false
-    },{
-      "productId": 9,
-      "productName": "json-server",
-      "productDescription": "typicode",
-      "productCategory":"----",
-      "productPrice":"12.55",
-      "starRating":3.5,
-      "vendor":"-----",
-      "favourite":false
-    },{
-      "productId": 10,
-      "productName": "json-server",
-      "productDescription": "typicode",
-      "productCategory":"----",
-      "productPrice":"12.55",
-      "starRating":3.5,
-      "vendor":"-----",
-      "favourite":false
-    },{
-      "productId": 11,
-      "productName": "json-server",
-      "productDescription": "typicode",
-      "productCategory":"----",
-      "productPrice":"12.55",
-      "starRating":3.5,
+      "imageUrl":"---------",
       "vendor":"-----",
       "favourite":false
     }

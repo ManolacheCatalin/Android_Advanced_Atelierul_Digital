@@ -4,6 +4,9 @@
      <variable
          name="category"
          type="com.app.shopwithus.data.model.Category" />
+     <variable
+         name="handler"
+         type="com.app.shopwithus.presentation.ui.home.Click" />
     </data>
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -12,10 +15,10 @@
     style="@style/CardView.Light"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="5dp"
     app:cardElevation="3dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginEnd="2dp"
     tools:ignore="ContentDescription">
 
     <FrameLayout
@@ -26,7 +29,9 @@
             android:id="@+id/media_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
             android:scaleType="centerCrop"
+            android:onClick="@{(v)->handler.click(v,category)}"
             app:SetImage="@{category.drawable}"
             app:layout_constraintDimensionRatio="H,16:9"
             app:layout_constraintTop_toTopOf="parent"

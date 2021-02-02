@@ -43,7 +43,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     public void updateUi(List<Product> list){
         this.items.clear();
         this.items.addAll(list);
-        notifyDataSetChanged();
+        this.notifyDataSetChanged();
     }
 
     static class ProductListViewHolder extends RecyclerView.ViewHolder{

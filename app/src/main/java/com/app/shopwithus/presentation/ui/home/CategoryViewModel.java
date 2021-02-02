@@ -19,6 +19,7 @@ public class CategoryViewModel extends ViewModel {
     }
 
     public List<Category> getItems() {
+        list.clear();
         list.addAll(categoryUseCase.getItems());
         return list;
     }

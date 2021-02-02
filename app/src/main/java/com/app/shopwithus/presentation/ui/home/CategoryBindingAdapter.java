@@ -2,6 +2,7 @@ package com.app.shopwithus.presentation.ui.home;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,10 +31,12 @@ public class CategoryBindingAdapter {
      if(adapter==null){
        adapter=new CategoryAdapter();
        recyclerView.setAdapter(adapter);
+       recyclerView.setNestedScrollingEnabled(false);
+       recyclerView.setHasFixedSize(true);
        recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
      }
      if(list!=null){
          ((CategoryAdapter)adapter).updateUi(list);
-     }
+    }
     }
 }

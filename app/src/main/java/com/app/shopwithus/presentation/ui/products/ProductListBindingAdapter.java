@@ -14,28 +14,14 @@ import java.util.List;
 
 public class ProductListBindingAdapter {
 
-//    @BindingAdapter("SetImageResource")
-//    public static void setImageRes(ImageView imageView, Integer drawable){
-//
-//    }
-//    @BindingAdapter("SetNameResource")
-//    public static void setName(TextView textView,String res){
-//
-//    }
-    @BindingAdapter("SetPrice")
-    public static void setPrice(TextView textView,Double res){
-
-    }
-    @BindingAdapter("SetFavourite")
-    public static void setFavourite(ImageView imageView,boolean res){
-
-    }
     @BindingAdapter("SetProductList")
     public static void setItems(RecyclerView recyclerView, List<Product> list){
         RecyclerView.Adapter<?> adapter=recyclerView.getAdapter();
         if(adapter==null){
-            adapter=new CategoryAdapter();
+            adapter=new ProductListAdapter();
             recyclerView.setAdapter(adapter);
+            recyclerView.setNestedScrollingEnabled(false);
+            recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
         }
         if(list!=null){

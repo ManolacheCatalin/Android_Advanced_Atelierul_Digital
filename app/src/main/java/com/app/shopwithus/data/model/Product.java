@@ -22,11 +22,11 @@ public class Product {
     @SerializedName("vendor")
     private String vendor;
     @SerializedName("imageUrl")
-    private byte[] imageRes;
+    private String imageRes;
     @SerializedName("favourite")
     private boolean favourite;
 
-    public Product(String productId, String productName, String productDescription, String productShortDescription, String productCategory, Double productPrice, Double starRating, String vendor, boolean favourite, byte[] imageRes) {
+    public Product(String productId, String productName, String productDescription, String productShortDescription, String productCategory, Double productPrice, Double starRating, String vendor, boolean favourite, String imageRes) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.starRating = starRating;
@@ -114,11 +114,11 @@ public class Product {
         return favourite;
     }
 
-    public byte[] getImageRes() {
+    public String getImageRes() {
         return imageRes;
     }
 
-    public void setImageRes(byte[] imageRes) {
+    public void setImageRes(String imageRes) {
         this.imageRes = imageRes;
     }
 }

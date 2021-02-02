@@ -1,11 +1,15 @@
 package com.app.shopwithus.presentation.ui.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -21,8 +25,6 @@ import java.util.List;
 public class CategoryFragment extends Fragment {
 
     private CategoryViewModel categoryViewModel;
-//    private RecyclerView recyclerView;
-    private CategoryAdapter adapter;
     private List<Category> list;
     public CategoryFragment(){
      this.list=new ArrayList<>();
@@ -33,8 +35,6 @@ public class CategoryFragment extends Fragment {
         categoryViewModel= new ViewModelProvider(getActivity(),new CategoryViewModelFactory(getActivity().getBaseContext())).get(CategoryViewModel.class);
         FragmentCategoryBinding binding= DataBindingUtil.inflate(inflater,R.layout.fragment_category,container,false);
         binding.setCategoryViewModel(categoryViewModel);
-        adapter=new CategoryAdapter();
-        adapter.updateUi(list);
         return binding.getRoot();
     }
 }
