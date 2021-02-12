@@ -4,6 +4,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.databinding.BindingAdapter;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -22,6 +24,7 @@ public class ProductListBindingAdapter {
             recyclerView.setAdapter(adapter);
             recyclerView.setNestedScrollingEnabled(false);
             recyclerView.setHasFixedSize(true);
+            recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(),DividerItemDecoration.VERTICAL));
             recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
         }
         if(list!=null){

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="product"
+            type="com.app.shopwithus.data.model.Product" />
+        <variable
+            name="viewmodel"
+            type="com.app.shopwithus.presentation.ui.detail.DetailViewModel" />
+        <variable
+            name="handler"
+            type="com.app.shopwithus.presentation.ui.detail.Oder" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.detail.DetailFragment">
+
+    <ImageView
+        android:id="@+id/image_detail_product"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:contentDescription="TODO"
+        app:SetImage="@{product.imageRes}"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_detail"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_detail_product"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:text="@{product.productName}"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/description_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_detail"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:text="@{product.productShortDescription}"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/price_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_detail"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:text="@{String.valueOf(product.productPrice)}"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:id="@+id/vendor_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price_detail"
+        android:layout_width="match_parent"
+        android:textSize="15sp"
+        android:text="@{product.vendor}"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:id="@+id/quantity_detail"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/vendor_detail"
+        android:layout_height="wrap_content">
+    </EditText>
+    <Button
+        android:id="@+id/order_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quantity_detail"
+        android:layout_width="wrap_content"
+        android:text="Buy"
+        android:onClick="@{()->handler.order(product)}"
+        android:layout_height="wrap_content">
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

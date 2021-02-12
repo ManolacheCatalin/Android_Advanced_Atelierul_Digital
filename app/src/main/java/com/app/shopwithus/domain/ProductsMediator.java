@@ -22,7 +22,8 @@ public class ProductsMediator {
 
     public List<Product> getItems(String argv) {
         items.clear();
-        items.addAll(serverFetchProducts.getProducts(argv));
+        serverFetchProducts.startCall(argv);
+        items.addAll(serverFetchProducts.getProducts());
         return items;
     }
 }

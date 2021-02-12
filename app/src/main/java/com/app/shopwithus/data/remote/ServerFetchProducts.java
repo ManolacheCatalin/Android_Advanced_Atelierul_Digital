@@ -26,8 +26,7 @@ public class ServerFetchProducts implements ProductsRepository {
     public ServerFetchProducts() {
         this.list = new ArrayList<>();
     }
-    @Override
-    public List<Product> getProducts(String argv) {
+    public void startCall(String argv) {
         Gson gsGson = new GsonBuilder()
                 .setLenient()
                 .create();
@@ -56,6 +55,10 @@ public class ServerFetchProducts implements ProductsRepository {
                 t.printStackTrace();
             }
         });
+    }
+
+    @Override
+    public List<Product> getProducts() {
         return list;
     }
 }

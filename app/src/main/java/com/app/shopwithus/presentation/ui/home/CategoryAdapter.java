@@ -75,7 +75,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     @Override
     public void click(View view, Category category) {
-        Log.d("DEBUG",category.getCategoryName());
         Bundle bundle = new Bundle();
         bundle.putString("Category", category.getCategoryName());
         Navigation.findNavController(view).navigate(R.id.nav_product, bundle);

@@ -6,16 +6,15 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
+        android:id="@+id/nav_detail"
+        android:name="com.app.shopwithus.presentation.ui.detail.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
         android:id="@+id/nav_home"
         android:name="com.app.shopwithus.presentation.ui.home.CategoryFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_category" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.app.shopwithus.presentation.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"

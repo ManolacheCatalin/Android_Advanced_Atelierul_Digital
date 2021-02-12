@@ -1,6 +1,7 @@
 package com.app.shopwithus.presentation.ui.products;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import com.app.shopwithus.data.model.Product;
 import com.app.shopwithus.data.remote.ServerFetchProducts;
 import com.app.shopwithus.databinding.FragmentCategoryBinding;
 import com.app.shopwithus.databinding.FragmentProductsBinding;
+import com.app.shopwithus.di.DepInjectionHelp;
 import com.app.shopwithus.domain.ProductsMediator;
 import com.app.shopwithus.domain.ProductsUseCase;
 import com.app.shopwithus.presentation.ui.home.CategoryViewModel;
@@ -38,19 +40,16 @@ public class ProductsFragment extends Fragment{
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         argv=getArguments().getString("Category");
+        Log.d("DEBUG",argv);
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       viewModel= new ViewModelProvider(getActivity(),new ProductViewModelFactory(createUseCase(),argv)).get(ProductsViewModel.class);
+       viewModel= new ViewModelProvider(getActivity(),new ProductViewModelFactory(DepInjectionHelp.getInstance().getProductsUseCase(),argv)).get(ProductsViewModel.class);
        FragmentProductsBinding binding= DataBindingUtil.inflate(inflater, R.layout.fragment_products,container,false);
        binding.setViewmodel(viewModel);
        return binding.getRoot();
-    }
-    public ProductsUseCase createUseCase(){
-        ProductsUseCase p=new ProductsUseCase(new ProductsMediator(new ServerFetchProducts()));
-        return p;
     }
 
 }

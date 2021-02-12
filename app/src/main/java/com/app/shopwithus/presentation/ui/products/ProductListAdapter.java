@@ -1,20 +1,27 @@
 package com.app.shopwithus.presentation.ui.products;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.solver.PriorityGoalRow;
 import androidx.databinding.DataBindingUtil;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.shopwithus.R;
+import com.app.shopwithus.data.model.Category;
 import com.app.shopwithus.data.model.Product;
 import com.app.shopwithus.databinding.MainListItemBinding;
+import com.app.shopwithus.presentation.ui.detail.ProductHelp;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder>{
+public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder> implements Click {
 
     private final List<Product> items;
 
@@ -34,6 +41,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     public void onBindViewHolder(@NonNull ProductListViewHolder holder, int position) {
         Product item=items.get(position);
         holder.bind(item);
+        holder.binding.setHandler(this::click);
     }
 
     @Override
@@ -44,6 +52,12 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         this.items.clear();
         this.items.addAll(list);
         this.notifyDataSetChanged();
+    }
+
+    @Override
+    public void click(View view,Product product) {
+        ProductHelp.getInstance().setProduct(product);
+        Navigation.findNavController(view).navigate(R.id.nav_detail);
     }
 
     static class ProductListViewHolder extends RecyclerView.ViewHolder{
