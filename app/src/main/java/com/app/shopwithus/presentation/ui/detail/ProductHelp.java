@@ -5,7 +5,7 @@ import com.app.shopwithus.data.model.Product;
 public class ProductHelp {
     private static ProductHelp instance;
     private  Product product;
-    public ProductHelp(){
+    private ProductHelp(){
 
     }
 

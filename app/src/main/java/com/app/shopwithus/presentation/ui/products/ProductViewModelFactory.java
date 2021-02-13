@@ -1,6 +1,7 @@
 package com.app.shopwithus.presentation.ui.products;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,8 +15,8 @@ import com.app.shopwithus.presentation.ui.home.CategoryViewModel;
 public class ProductViewModelFactory  implements ViewModelProvider.Factory{
 
     private ProductsUseCase productsUseCase;
-    private String argv;
-    public ProductViewModelFactory(ProductsUseCase productsUseCase,String argv){
+    private MutableLiveData<String> argv;
+    public ProductViewModelFactory(ProductsUseCase productsUseCase,MutableLiveData<String> argv){
         this.productsUseCase=productsUseCase;
         this.argv=argv;
     }

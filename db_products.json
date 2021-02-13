@@ -1,6 +1,7 @@
   {"products":
     [
       {
+      "productId":"12345",
       "productName": "Laptop Gaming Lenovo Legion 5 15IMH05H",
       "productShortDescription":"Intel Core i7-10750H pana la 5.0GHz, 15.6 Full HD, 16GB, SSD 512GB, NVIDIA GeForce GTX 1650 Ti 4GB, Free DOS",
       "productDescription": "Experimentați gaming-ul ca niciodată pe laptopul Legion 5 alimentat de procesoarele Intel® Core seria H din generatia a 10-a. Jucați și transmiteți cele mai noi titluri AAA la performanțe maxime pe Legion 5 cu frecvente de până la 4.5 GHz, 4 nuclee, 8 MB cache si Intel® Wi-Fi 6",
@@ -11,6 +12,7 @@
       "vendor":"Lenovo Romania",
       "favourite":false
     },{
+      "productId":"123457",
       "productName": "Laptop ACER Aspire 3 A315-23-R4L4",
       "productShortDescription":"Laptop ACER Aspire 3 A315-23-R4L4, AMD Ryzen 5 3500U pana la 3.7GHz, 15.6 Full HD, 8GB, SSD 512GB, AMD Radeon Vega 8, Free DOS, negru",
       "productDescription": "Aspire 3 este laptopul ideal pentru nevoile tale zilnice. Combinatia de tehnologie puternica si caracteristicile bine gandite de design il fac dispozitivul ideal pentru munca sau relaxare.Culorile clare, realiste, prind viata la rezolutia FHD(1). Profita de un monitor mai mare pentru aceste elemente vizuale uimitoare cu afisajul de 17.3, 15.6 sau 14 si design-ul de cadru ingust(1). Filtreaza lumina albastra care oboseste ochii si lucreaza confortabil pentru mai mult timp cu tehnologia Acer BlueLightShield.Indiferent de ce instrumente ai nevoie pentru a te conecta, Aspire 3 are tot ce trebuie. Realizeaza mai mult cu gama completa de porturi, inclusiv USB3.1, USB2.0, HDMI si multe altele(1). Lucreaza mai eficient cu suportul tactil de precizie, care raspunde mult mai bine decat suporturile tactile traditionale.",
@@ -21,6 +23,7 @@
       "vendor":"Acer Romania",
       "favourite":false
     },{
+      "productId":"12348",
       "productName": "Laptop HP 14-dk0009nq",
       "productShortDescription":"AMD Ryzen 5 3500U pana la 3.7GHz, 14 Full HD, 8GB, SSD 512GB, AMD Radeon Vega 8, Windows 10 Home, argintiu",
       "productDescription": "LAPTOP FIABIL, CU DESIGN SUBTIRE SI ELEGANT.Acest laptop subtire si ultraportabil asigura performante fiabile. Ecranul cu micro-margini iti ofera multe de vazut, cu mai mult spatiu de afisare intr-o rama mai ingusta.CONECTOR USB 3.1Cu cea mai populara conexiune USB din lume, puteti sa conectati simplu oricare dintre dispozitivele USB existente si sa beneficiati de viteze de transfer al datelor de zece ori mai mari decat cu USB 2.0.USB-C.Alimentezi dispozitivul sau conectezi un afisaj extern de la un singur port usb tip c, cu o rata de transmisie a datelor de 5 Gb/s. Si este reversibil, astfel incat poti sa introduci conectorul in orice pozitie.",
